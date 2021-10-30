@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@200;400;700&display=swap');
+
+html {
+  font-family: 'Commissioner', sans-serif;
+}
+body {
+  margin: 0px;
+}
+/* top */
+.menu-btn-con {
+  width: 20px;
+  height: 20px;
+  border: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  align-self: end;
+}
+.menu-btn {
+  width: 80%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn::before,
+.menu-btn::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn::before {
+  transform: translateY(-5px);
+}
+.menu-btn::after {
+  transform: translateY(5px);
+}
+.menu-btn-con.open .menu-btn {
+  transform: translateX(-50px);
+  background: transparent;
+}
+.menu-btn-con.open .menu-btn::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn-con.open .menu-btn::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+header {
+  height: 250px;
+  background-image: url("images/image-hero-mobile.jpg");
+  background-size: 100%;
+}
+.top-nav {
+  display: flex;
+  gap: 50%;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+}
+.top-nav span {
+  color: white;
+  width: 30%;
+  font-size: 30px;
+  font-weight: 700;
+}
+header section {
+  display: none;
+  opacity: 0;
+  width: 80%;
+  max-width: 300px;
+  align-items: start;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  align-self: center;
+  position: absolute;
+  z-index: 10;
+  top: 70px;
+  left: 10%;
+  transition: all 0.5s ease-in-out;
+}
+.visuallyhidden {
+  opacity: 1 !important;
+}
+.visible {
+  display: flex !important;
+}
+header section a {
+  cursor: pointer;
+  font-weight: 700;
+  color: black;
+  padding: 10px;
+}
+header section hr {
+  width: 100%;
+  height: 0.1px;
+  background-color: hsl(0, 14%, 95%);
+}
+/* The main body */
+
+main {
+  background-color: hsl(0, 14%, 95%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.first,
+.second,
+#product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 80%;
+  position: relative;
+  z-index: 1;
+  margin: -20px 0px 0px 0px;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+}
+.first img {
+  width: 60px;
+  position: absolute;
+  top: -30px;
+}
+.first h1 {
+  font-size: 150%;
+}
+.first h1,
+.first p {
+  text-align: center;
+}
+.first section {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#back {
+  background-color: hsl(176, 50%, 47%);
+  width: 60%;
+  height: auto;
+  padding: 10px;
+  border-radius: 30px;
+  border: 0px;
+  color: white;
+  font-weight: 700;
+}
+#bookmark {
+  height: auto;
+  width: 2.5em;
+  background-image: url("images/icon-bookmark.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0px;
+  background-color: white;
+}
+#bookmark img {
+  display: none;
+  position: unset;
+}
+#bookmark span {
+  display: none;
+}
+/* second */
+.second {
+  margin: 0px 0px 0px 0px;
+}
+.second hr {
+  width: 20%;
+  height: 0.5;
+}
+#backed h1,
+#backed p,
+#backers h1,
+#backers p,
+#days h1,
+#days p {
+  text-align: center;
+}
+.second progress::-webkit-progress-value {
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 5px;
+}
+.second progress::-moz-progress-value {
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 5px;
+}
+.second progress::-webkit-writing-mode {
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 10px;
+}
+
+#product {
+  margin: 0px 0px 0px 0px;
+  padding: 20px 20px 20px 20px;
+}
+#product h3 {
+  font-weight: 700;
+}
+#product p {
+  font-weight: 400;
+}
+#about p {
+  line-height: 25px;
+}
+.stands {
+  border: 1px solid hsl(0, 0%, 48%);
+  padding: 20px 20px 20px 20px;
+  margin: 0px 0px 20px 0px;
+  border-radius: 10px;
+}
+.stand-top span {
+  color: hsl(176, 50%, 47%);
+}
+.stands p {
+  line-height: 25px;
+}
+.stands section button {
+  display: block;
+  border: 0px;
+  padding: 20px;
+  color: white;
+  background-color: hsl(176, 50%, 47%);
+  border-radius: 50px;
+  margin: 20px 0px 0px 0px;
+}
+.left span {
+  font-size: 30px;
+  font-weight: 700;
+}
+.left span small {
+  color: hsl(0, 0%, 48%);
+  font-size: 70%;
+  font-weight: 400;
+}
+#mahogany {
+  background:hsla(0, 1%, 46%, 0.1)
+}
+#mahogany section button {
+  background-color: hsla(0, 0%, 48%, 0.4);
+}
+#mahogany section span, #mahogany h3, #mahogany p{
+  opacity: 0.3;
+}
+p {
+  color: hsl(0, 0%, 48%);
+}
+/* main body ends*/
+/* modal section starts */
+#modal,
+#thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 80%;
+  position: relative;
+  z-index: 4;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0px 0px 1px 100vmax rgba(0,0,0,0.8);
+}
+#modal {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  z-index: 6;
+  top: 100px;
+  transition: all 0.5s ease-in-out;
+}
+#modal h3 {
+  align-self: start;
+}
+#modal #exit-btn {
+  position: absolute;
+  background-image: url("images/icon-close-modal.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  right: 10px;
+}
+.reward-stands {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid hsl(0, 0%, 48%);
+  border-radius: 10px;
+  margin: 0px 0px 20px 0px;
+}
+.reward-stands aside {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.reward-stands aside p {
+  text-align: center;
+}
+.reward-stands aside section {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.reward-stands aside section input[type="number"] {
+  width: 30%;
+  padding: 20px;
+  border: 1px solid hsl(0, 0%, 48%);
+  border-radius: 50px;
+  background-image: url("images/dollar-logo.png");
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: 20% 50%;
+  text-align: right;
+  font-size: 150%;
+}
+aside section #no-rwd-cont,
+aside #no-rwd-cont {
+  width: 100%;
+  padding: 20px;
+}
+.reward-stands aside section button {
+  width: 60%;
+  border-radius: 50px;
+  border: 0px;
+  color: white;
+  background: hsl(176, 50%, 47%);
+  cursor: hover;
+}
+.reward-stands aside hr {
+  width: 100%;
+  height: 0.5px;
+}
+#modal .active {
+  border: 2px solid hsl(176, 50%, 47%);
+}
+.active aside {
+  display: flex;
+}
+input[type="checkbox"] {
+  opacity: 0px;
+  width: 0px;
+  height: 0px;
+}
+.left-up {
+  display: none;
+}
+.left-down small {
+  color:hsl(0, 1%, 46%)
+}
+input[type="checkbox"]::after {
+  content: "";
+  display: flex;
+  flex-direction: row;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  border: 1px solid hsl(0, 0%, 48%);
+  background-color: white;
+}
+input[type="checkbox"]:checked:after {
+  background: radial-gradient(hsl(176, 50%, 47%) 51%, white 50%);
+}
+/* thanks */
+#thanks {
+  display: none;
+}
+#thanks.visuallyhidden {
+  position: fixed;
+  top: 180px;
+  z-index: 10;
+  width: 70vw;
+}
+#thanks p {
+  text-align: center;
+}
+#thanks button {
+  width: 50%;
+  border: 0px;
+  padding: 20px;
+  background-color: hsl(176, 50%, 47%);
+  display: block;
+  border-radius: 50px;
+  margin: 20px 0px 0px 0px;
+  color: white;
+}
+label {
+  cursor: pointer;
+}
+label section h4:hover {
+  color: hsl(176, 50%, 47%);
+  cursor: pointer;
+}
+label section h4 .pledge {
+  color:hsl(176, 50%, 47%);
+}
+@media screen and (min-width: 800px) {
+  html {
+    background-color: hsl(0, 14%, 95%);
+  }
+  body {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main {
+    background-color: unset;
+    position: relative;
+    top: -200px;
+
+    max-width: 800px;
+    align-self: center;
+  }
+  header {
+    height: 490px;
+    background-image: url("images/image-hero-desktop.jpg");
+    background-repeat: no-repeat;
+  }
+  .first section {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: auto;
+    flex-wrap: unset;
+    justify-content: unset;
+  }
+  #bookmark span {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: -10px;
+  }
+  #bookmark img {
+    display: inline-block;
+    width: 33px;
+    margin-left: -5px;
+    height: 100%;
+  }
+  #back {
+    display: inline-block;
+    width: 150px;
+  }
+  #bookmark {
+    position: absolute;
+    right: 0px;
+    display: block;
+    width: auto;
+    height: 95%;
+    background-image: none;
+    background-color: hsl(0, 8%, 90%);
+    border: 0px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  #bookmark:active {
+    background-color:hsl(176, 50%, 47%);
+}
+  .second {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 0px 0px 0px;
+  }
+  .second hr {
+    width: 0.1px;
+    height: 50px;
+  }
+  .left-up{
+    display: inline;
+    float: right;
+  }
+  .left-up small {
+    color:hsl(0, 1%, 46%)
+  }
+  .left-down {
+    display: none;
+  }
+  #second-adj {
+    display: flex;
+    flex-direction: column;
+  }
+  #second-adj progress {
+    width: 80%;
+  }
+  .stand-top section, .left {
+      position: relative;
+  }
+  .stand-top h3, .left span{
+      display: inline;
+  }
+  .stand-top span {
+      display: inline-block;
+      position: absolute;
+      right: 50px;
+  }
+  .left button {
+      display: inline;
+      position: absolute;
+      top: -30px;
+      right: 20px;
+      padding: 10px;
+  }
+  .ed:after {
+      content: 'ed';
+      top: -10px;
+  }
+  #thanks {
+      width: 40%!important;
+  }
+}
